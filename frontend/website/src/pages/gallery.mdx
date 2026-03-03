@@ -1,0 +1,24 @@
+---
+title: Queens of Pain
+description: Queens of Pain Cycling Community
+created: 2026-02-28 09:45:00
+modified: 2026-02-28 09:50:00
+layout: "@layouts/Layout.astro"
+---
+
+import { LightGallery } from "astro-lightgallery";
+
+<LightGallery
+  layout={{
+    imgs: [
+      { src: "/gallery/hero-image.webp" },
+      { src: "/gallery/landing1.webp" },
+      { src: "/gallery/landing2.webp" },
+      { src: "/gallery/landing3.webp" },
+      { src: "/gallery/landing4.webp" },
+    ],
+  }}
+  options={{
+    thumbnail: true,
+  }}
+/>

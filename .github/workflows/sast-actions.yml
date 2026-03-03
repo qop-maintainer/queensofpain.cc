@@ -1,0 +1,32 @@
+name: Scan GitHub Actions with Zizmor
+
+on:
+  schedule:
+    - cron: "32 03 * * 0" # Every Sunday at 03:32 UTC
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["**"]
+
+permissions: {}
+
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+      security-events: write
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@a90bcbc6539c36a85cdfeb73f7e2f433735f215b # v2.15.0
+        with:
+          egress-policy: audit
+
+      - name: Checkout Repo
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+
+      - name: Scan GitHub Actions
+        uses: zizmorcore/zizmor-action@e639db99335bc9038abc0e066dfcd72e23d26fb4 # v0.3.0

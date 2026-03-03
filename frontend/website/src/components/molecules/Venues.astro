@@ -1,0 +1,40 @@
+---
+import { Leaflet, CreateLeafletIcon } from "astro-leaflet";
+import type {
+  AstroLeafletOptionsType,
+  AstroLeafletMarkerType,
+} from "astro-leaflet";
+import { VENUES } from "@references/venues";
+
+const markers: AstroLeafletMarkerType[] = [];
+
+for (const venue of VENUES) {
+  markers.push({
+    latlng: [venue.lat, venue.lng],
+    options: { title: venue.label },
+    astroIconName: "venue-icon",
+  });
+}
+
+const options: AstroLeafletOptionsType = {
+  tileByName: "Google&type=street",
+  markers: markers,
+  center: [55.964, -3.215],
+  zoom: 12,
+};
+---
+
+<CreateLeafletIcon
+  name="venue-icon"
+  options={{ className: "leaflet-icon-venue", iconSize: [30, 30] }}
+/>
+<Leaflet options={options} />
+
+<style is:global>
+  /* class definition used to define the custom icon */
+  .leaflet-icon-venue {
+    background: orchid;
+    border: 5px solid orange;
+    border-radius: 50%;
+  }
+</style>

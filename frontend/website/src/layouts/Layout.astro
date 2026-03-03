@@ -1,0 +1,50 @@
+---
+export interface Props {
+  frontmatter: {
+    title: string;
+    description: string;
+    created: string;
+    modified: string;
+  };
+}
+
+import CommunityGraph from "@components/molecules/CommunityGraph.astro";
+import CommunityProfile from "@components/molecules/CommunityProfile.astro";
+import Footer from "@components/organisms/Footer.astro";
+import Header from "@components/organisms/Header.astro";
+import "../assets/site.css";
+
+const { frontmatter } = Astro.props as Props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{frontmatter.title}</title>
+    <meta name="description" content={frontmatter.description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+
+    <CommunityGraph
+      title={frontmatter.title}
+      description={frontmatter.description}
+    />
+    <CommunityProfile />
+
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body class="prose md:prose-lg lg:prose-xl max-w-none">
+    <Header />
+    <main class="p-10">
+      <h1>{frontmatter.title}</h1>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

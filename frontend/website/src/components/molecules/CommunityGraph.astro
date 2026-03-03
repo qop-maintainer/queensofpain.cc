@@ -1,0 +1,22 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+}
+
+import { COMMUNITY } from "@references/community";
+
+const {
+  title = `${COMMUNITY.SHORT_NAME} | ${COMMUNITY.TAGLINE}`,
+  description = COMMUNITY.PURPOSE,
+} = Astro.props as Props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.url);
+---
+
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:site_name" content={COMMUNITY.SHORT_NAME} />
+<meta property="og:image" content={new URL("/favicon.svg", Astro.url)} />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:type" content="website" />

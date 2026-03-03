@@ -1,0 +1,12 @@
+packages:
+  - "frontend/*"
+  - "infrastructure/*"
+  - "packages/*"
+  - "tooling/*"
+
+onlyBuiltDependencies:
+  - "@tailwindcss/oxide"
+  - esbuild
+  - sharp
+
+# minimumReleaseAge: 2160

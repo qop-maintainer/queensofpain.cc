@@ -1,0 +1,41 @@
+{
+  "name": "website",
+  "author": {
+    "name": "Queens of Pain"
+  },
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "astro": "astro",
+    "build": "astro build",
+    "check-types": "astro check",
+    "dev": "astro dev",
+    "lint": "eslint .",
+    "preview": "astro preview",
+    "start": "astro dev"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.6",
+    "@astrojs/mdx": "4.3.13",
+    "@astrojs/ts-plugin": "1.10.6",
+    "@repo/eslint-config": "workspace:*",
+    "astro": "5.18.0",
+    "astro-embed": "0.12.0",
+    "astro-leaflet": "1.10.0",
+    "astro-lightgallery": "2.3.0",
+    "eslint": "10.0.2",
+    "node-html-parser": "7.1.0",
+    "sharp": "0.34.5",
+    "typescript": "5.9.3",
+    "zod": "4.3.6"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.0",
+    "@tailwindcss/typography": "0.5.19",
+    "@tailwindcss/vite": "4.2.1",
+    "daisyui": "5.5.19",
+    "tailwindcss": "4.2.1"
+  }
+}

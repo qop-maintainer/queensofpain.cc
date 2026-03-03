@@ -1,0 +1,68 @@
+---
+export interface Props {
+  frontmatter?: {
+    title?: string;
+    description?: string;
+    created?: string;
+    modified?: string;
+  };
+  type?: string;
+}
+
+import { COMMUNITY } from "@references/community";
+
+const { frontmatter, type = "" } = Astro.props as Props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.url);
+const siteURL = new URL("/", Astro.url);
+const websiteSchema = new URL("/#/schema/WebSite", Astro.url);
+const personSchema = new URL(
+  `/#/schema/Person/${COMMUNITY.SHORT_NAME}`,
+  Astro.url,
+);
+
+const communityProfile = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": websiteSchema,
+      name: COMMUNITY.SHORT_NAME,
+      description: COMMUNITY.PURPOSE,
+      url: siteURL,
+      publisher: {
+        "@type": "Person",
+        "@id": personSchema,
+        name: COMMUNITY.SHORT_NAME,
+        url: siteURL,
+      },
+    },
+    ...(type
+      ? [
+          {
+            "@type": type,
+            "@id": canonicalURL,
+            url: canonicalURL,
+            name: frontmatter?.title,
+            headline: frontmatter?.title,
+            description: frontmatter?.description,
+            isPartOf: {
+              "@id": websiteSchema,
+            },
+            datePublished: frontmatter?.created,
+            dateModified: frontmatter?.modified,
+            author: {
+              "@type": "Person",
+              "@id": personSchema,
+            },
+          },
+        ]
+      : []),
+  ],
+};
+---
+
+<script
+  is:inline
+  type="application/ld+json"
+  set:html={JSON.stringify(communityProfile)}
+/>

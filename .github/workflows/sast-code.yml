@@ -1,0 +1,57 @@
+name: Scan Code with CodeQL
+
+on:
+  schedule:
+    - cron: "32 05 * * 0" # Every Sunday at 05:32 UTC
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+    paths-ignore:
+      - "**/*.md"
+
+permissions: {}
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    permissions:
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - language: javascript
+            build-mode: none
+          - language: typescript
+            build-mode: none
+
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@a90bcbc6539c36a85cdfeb73f7e2f433735f215b # v2.15.0
+        with:
+          disable-sudo-and-containers: true
+          egress-policy: audit
+          allowed-endpoints: >
+            github.com:443
+
+      - name: Checkout Repo
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@cf1bb45a277cb3c205638b2cd5c984db1c46a412 # v4.31.7
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
+          queries: security-extended
+
+      - name: Perform Analysis
+        uses: github/codeql-action/analyze@cf1bb45a277cb3c205638b2cd5c984db1c46a412 # v4.31.7
+        with:
+          category: "/language:${{matrix.language}}"

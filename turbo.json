@@ -1,0 +1,30 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalEnv": ["AWS_ACCOUNT", "CI"],
+  "ui": "tui",
+  "tasks": {
+    "browsers": {
+      "dependsOn": ["^browsers"]
+    },
+    "build": {
+      "dependsOn": ["^build", "lint", "check-types"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["dist/**"]
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"]
+    },
+    "ci": {
+      "dependsOn": ["build"]
+    },
+    "e2e": {
+      "dependsOn": ["^build", "browsers"],
+      "passThroughEnv": ["PLAYWRIGHT_TEST_BASE_URL"]
+    },
+    "lint": {},
+    "start": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

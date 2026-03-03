@@ -1,0 +1,32 @@
+---
+// Upcoming Rides: https://docs.google.com/spreadsheets/d/1LmhSBfHQe-ZPmIYBpQIKEdKriYoIE9It4u_m1AEJgis/edit?usp=sharing
+const sheet = "1LmhSBfHQe-ZPmIYBpQIKEdKriYoIE9It4u_m1AEJgis";
+const name = "Rides";
+const response = await fetch(`https://opensheet.elk.sh/${sheet}/${name}`);
+const data = await response.json();
+
+type rideType = { "Date": string; "Ride Name": string; "Outliers URL": string; "Starting At": string; "Led By": string };
+---
+
+<ul>
+  {
+    data
+      .filter((ride: rideType) => new Date(ride["Date"]) >= new Date())
+      .sort(
+        (a: rideType, b: rideType) =>
+          new Date(a["Date"]).getTime() - new Date(b["Date"]).getTime(),
+      )
+      .map((ride: rideType) => (
+        <li>
+          <a
+            class="link"
+            href={ride["Outliers URL"]}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {ride["Date"]} - <b>{ride["Ride Name"]}</b>, led by {ride["Led By"]} and starting at {ride["Starting At"]}
+          </a>
+        </li>
+      ))
+  }
+</ul>

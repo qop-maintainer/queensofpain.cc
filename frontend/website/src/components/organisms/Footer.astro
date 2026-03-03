@@ -1,0 +1,20 @@
+---
+import ContactCommunity from "@components/atoms/ContactCommunity.astro";
+import SocialsInstagram from "@components/atoms/SocialsInstagram.astro";
+---
+
+<footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+  <aside>
+    <p>
+      If you have a question for us, you can reach out to us through our
+      Instagram, or email to <ContactCommunity />.
+      <br />
+      Copyright © {new Date().getFullYear()} Queens of Pain. All rights reserved.
+    </p>
+  </aside>
+  <nav>
+    <div class="grid grid-flow-col gap-4">
+      <SocialsInstagram />
+    </div>
+  </nav>
+</footer>

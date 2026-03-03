@@ -1,0 +1,66 @@
+---
+import CommunityLogo from "@components/atoms/CommunityLogo.astro";
+import SocialsInstagram from "@components/atoms/SocialsInstagram.astro";
+import { MENU_ITEMS } from "@references/menu";
+---
+
+<div class="navbar bg-base-100">
+  <div class="navbar-start">
+    <a class="btn btn-ghost text-xl" href="/">
+      <CommunityLogo />
+    </a>
+  </div>
+
+  <div class="navbar-end hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      {
+        MENU_ITEMS.map((item) => (
+          <li>
+            <a class="link" href={item.href}>
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <SocialsInstagram />
+  </div>
+  <div class="navbar-end lg:hidden">
+    <div class="dropdown dropdown-end">
+      <div
+        tabindex="0"
+        role="button"
+        class="btn btn-ghost"
+        aria-label="Dropdown Menu"
+      >
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-base-100 rounded-box w-52"
+      >
+        {
+          MENU_ITEMS.map((item) => (
+            <li>
+              <a class="link" href={item.href}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <SocialsInstagram />
+  </div>
+</div>
