@@ -18,8 +18,10 @@ jobs:
         uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
         with:
           disable-sudo-and-containers: true
-          egress-policy: audit
+          egress-policy: block
           allowed-endpoints: >
+            api.github.com:443
+            api.securityscorecards.dev:443
             github.com:443
 
       - name: Checkout Repo
@@ -36,15 +38,20 @@ jobs:
     permissions:
       contents: read
 
+    env:
+      TURBO_TELEMETRY_DISABLED: 1
+
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
         with:
           disable-sudo-and-containers: true
-          egress-policy: audit
+          egress-policy: block
           allowed-endpoints: >
             github.com:443
             nodejs.org:443
+            opensheet.elk.sh:443
+            registry.npmjs.org:443
 
       - name: Checkout Repo
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
