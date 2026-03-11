@@ -39,6 +39,7 @@ jobs:
       contents: read
 
     env:
+      ASTRO_TELEMETRY_DISABLED: 1
       TURBO_TELEMETRY_DISABLED: 1
 
     steps:
@@ -47,6 +48,7 @@ jobs:
         with:
           disable-sudo-and-containers: true
           egress-policy: block
+          # We use Opensheet as a facade over Google Sheets, where Rides data is stored.
           allowed-endpoints: >
             github.com:443
             nodejs.org:443
