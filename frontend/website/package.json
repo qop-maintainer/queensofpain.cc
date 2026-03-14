@@ -17,11 +17,11 @@
     "start": "astro dev"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.6",
-    "@astrojs/mdx": "4.3.13",
-    "@astrojs/ts-plugin": "1.10.6",
+    "@astrojs/check": "0.9.7",
+    "@astrojs/mdx": "4.3.14",
+    "@astrojs/ts-plugin": "1.10.7",
     "@repo/eslint-config": "workspace:*",
-    "astro": "5.18.0",
+    "astro": "5.18.1",
     "astro-embed": "0.12.0",
     "astro-leaflet": "1.10.0",
     "astro-lightgallery": "2.3.0",
@@ -32,7 +32,7 @@
     "zod": "4.3.6"
   },
   "dependencies": {
-    "@astrojs/sitemap": "3.7.0",
+    "@astrojs/sitemap": "3.7.1",
     "@tailwindcss/typography": "0.5.19",
     "@tailwindcss/vite": "4.2.1",
     "daisyui": "5.5.19",
