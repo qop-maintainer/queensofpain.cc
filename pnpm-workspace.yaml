@@ -4,9 +4,23 @@ packages:
   - "packages/*"
   - "tooling/*"
 
+minimumReleaseAge: 4320
+nodeVersion: 24.14.0
+engineStrict: true
+
 onlyBuiltDependencies:
   - "@tailwindcss/oxide"
   - esbuild
   - sharp
 
-minimumReleaseAge: 4320
+overrides:
+  "sharp@<0.32.6": ">=0.32.6"
+  "brace-expansion@>=1.0.0 <=1.1.11": ">=1.1.12"
+  "brace-expansion@>=2.0.0 <=2.0.1": ">=2.0.2"
+  "nanoid@<3.3.8": ">=3.3.8"
+  "lodash@>=4.0.0 <=4.17.22": ">=4.17.23"
+  "svgo@=4.0.0": ">=4.0.1"
+  "devalue@<5.6.4": ">=5.6.4"
+  "devalue@<=5.6.3": ">=5.6.4"
+  "flatted@<3.4.0": ">=3.4.0"
+  "h3@<1.15.6": ">=1.15.6"
