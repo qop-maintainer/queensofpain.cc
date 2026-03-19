@@ -18,10 +18,10 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.7",
-    "@astrojs/mdx": "4.3.14",
+    "@astrojs/mdx": "5.0.1",
     "@astrojs/ts-plugin": "1.10.7",
     "@repo/eslint-config": "workspace:*",
-    "astro": "5.18.1",
+    "astro": "6.0.5",
     "astro-embed": "0.12.0",
     "astro-leaflet": "1.10.0",
     "astro-lightgallery": "2.3.0",
