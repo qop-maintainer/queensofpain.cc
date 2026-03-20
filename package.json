@@ -12,7 +12,7 @@
     "build": "turbo run build",
     "start": "turbo run start",
     "lint": "turbo run lint",
-    "format": "prettier --ignore-path .gitignore --ignore-unknown --write \"**/*.{js,mjs,json,ts,tsx,md,mdx,yml,astro,feature}\"",
+    "format": "prettier --ignore-path .gitignore --ignore-unknown --write \"**/*.{js,mjs,json,ts,tsx,md,mdx,yml,yaml,astro,feature}\"",
     "browsers": "turbo run browsers",
     "e2e": "turbo run e2e",
     "ci": "turbo run ci"
