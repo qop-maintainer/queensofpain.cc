@@ -1,24 +1,34 @@
 repos:
-- repo: https://github.com/gitleaks/gitleaks
-  rev: v8.30.1
-  hooks:
-  - id: gitleaks
-- repo: local
-  hooks:
-  - id: formatter
-    name: Format everything with Prettier
-    language: system
-    files: ^.*$
-    entry: |
-      bash -c 'pnpm run format' --
-  - id: linter
-    name: Lint everything with ESLint
-    language: system
-    files: ^.*$
-    entry: |
-      bash -c 'pnpm run lint' --
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v6.0.0
-  hooks:
-  - id: end-of-file-fixer
-  - id: trailing-whitespace
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: check-json
+      - id: detect-private-key
+      - id: no-commit-to-branch
+        args: ["--branch", "main"]
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+  - repo: local
+    hooks:
+      - id: formatter
+        name: Format everything with Prettier
+        language: system
+        files: ^.*$
+        entry: |
+          bash -c 'pnpm run format' --
+      - id: linter
+        name: Lint everything with ESLint
+        language: system
+        files: ^.*$
+        entry: |
+          bash -c 'pnpm run lint' --
+  - repo: https://github.com/koalaman/shellcheck-precommit
+    rev: v0.11.0
+    hooks:
+      - id: shellcheck
