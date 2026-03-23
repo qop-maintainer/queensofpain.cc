@@ -34,8 +34,8 @@
   "dependencies": {
     "@astrojs/sitemap": "3.7.1",
     "@tailwindcss/typography": "0.5.19",
-    "@tailwindcss/vite": "4.2.1",
+    "@tailwindcss/vite": "4.2.2",
     "daisyui": "5.5.19",
-    "tailwindcss": "4.2.1"
+    "tailwindcss": "4.2.2"
   }
 }
