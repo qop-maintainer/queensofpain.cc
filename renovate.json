@@ -6,6 +6,7 @@
     ":gitSignOff"
   ],
   "internalChecksFilter": "strict",
+  "lockFileMaintenance": { "enabled": false },
   "minimumReleaseAge": "3 days",
   "packageRules": [
     {
