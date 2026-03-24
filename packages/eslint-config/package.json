@@ -23,6 +23,6 @@
     "typescript-eslint": "8.57.1"
   },
   "peerDependencies": {
-    "eslint": "10.0.3"
+    "eslint": "10.1.0"
   }
 }
