@@ -15,4 +15,7 @@ export default defineConfig({
       include: ["astro-leaflet > leaflet"],
     },
   },
+  security: {
+    csp: true,
+  },
 });
