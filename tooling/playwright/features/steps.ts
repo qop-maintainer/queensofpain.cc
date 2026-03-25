@@ -17,7 +17,10 @@ When("I navigate to {string}", async ({ page }, url) => {
 });
 
 Then("I see {string} in the title", async ({ page }, keyword) => {
-  const escapedKeyword = keyword.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`);
+  const escapedKeyword = keyword.replaceAll(
+    /[.*+?^${}()|[\]\\]/g,
+    String.raw`\$&`,
+  );
   await expect(page).toHaveTitle(new RegExp(escapedKeyword), { timeout: 4500 });
 });
 
