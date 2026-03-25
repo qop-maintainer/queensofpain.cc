@@ -7,8 +7,9 @@
 ## Individual Contributors
 
 **Maintainer:** [@ramirezj](https://github.com/ramirezj)
+[@cmotion01](https://github.com/cmotion01)
 
-- Your name here?
+Your name here?
 
 ## Bots (and GitHub Apps)
 
