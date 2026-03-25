@@ -9,8 +9,6 @@
 **Maintainer:** [@ramirezj](https://github.com/ramirezj)
 [@cmotion01](https://github.com/cmotion01)
 
-Your name here?
-
 ## Bots (and GitHub Apps)
 
 - [@coderabbitai](https://github.com/apps/coderabbitai)

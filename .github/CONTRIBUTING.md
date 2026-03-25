@@ -24,7 +24,7 @@ We request that prospective contributors include themselves in our [Contributors
 within their first pull request, to indicate they have read these guidelines and
 agree to uphold our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-We require that contributors:
+We recommend that contributors:
 
 - [Sign off their commits](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-the-commit-signoff-policy-for-your-repository#about-commit-signoffs)
 - [Sign their commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits)

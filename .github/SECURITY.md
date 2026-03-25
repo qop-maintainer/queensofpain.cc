@@ -84,6 +84,6 @@ together with the team behind [security.txt](https://securitytxt.org/)
 
 Licensed under [CC BY-SA 4.0 Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
 
-[security]: mailto:qop.maintainer@ggmail.com
+[security]: mailto:qop.maintainer@gmail.com
 [disclosure]: https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html#responsible-or-coordinated-disclosure
 [category]: https://owasp.org/www-project-top-ten/
