@@ -11,7 +11,7 @@
   "packageRules": [
     {
       "groupName": "types-and-linters",
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": ["devDependencies", "peerDependencies"],
       "automerge": true,
       "matchPackageNames": ["/@types/", "/lint/", "/prettier/"]
     }
