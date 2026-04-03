@@ -38,6 +38,7 @@ jobs:
 
     permissions:
       contents: read
+      id-token: write
 
     env:
       ASTRO_TELEMETRY_DISABLED: 1
