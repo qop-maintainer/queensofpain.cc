@@ -94,3 +94,13 @@ jobs:
 
       - name: Attempt Build
         run: pnpm run build
+
+      - name: Configure AWS credentials PR (read-only)
+        uses: aws-actions/configure-aws-credentials@8df5847569e6427dd6c4fb1cf565c83acfa8afa7 # v6.0.0
+        with:
+          role-to-assume: ${{ secrets.AWS_IAM_ROLE_DEPLOY }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Upload Build Artifacts
+        run: aws s3 ls
+
