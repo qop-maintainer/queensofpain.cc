@@ -3,7 +3,10 @@ name: Continuous Integration
 on:
   pull_request:
     branches: ["**"]
-
+  push:
+    branches:
+      - main
+      
 permissions: {}
 
 jobs:
@@ -107,7 +110,7 @@ jobs:
     needs: [dependency-review, try-build]
     environment:
       name: production
-    if: ${{ github.repository == 'qop-maintainer/queensofpain.cc' && github.event.pull_request.merged == true }}
+    if: ${{ github.repository == 'qop-maintainer/queensofpain.cc' && github.event.ref == 'refs/heads/main' }}
 
     permissions:
       contents: read
