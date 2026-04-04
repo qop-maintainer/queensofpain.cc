@@ -107,7 +107,7 @@ jobs:
     needs: [dependency-review, try-build]
     environment:
       name: production
-    if: ${{ github.repository == 'qop-maintainer/queensofpain.cc' && github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true }}
+    if: ${{ github.repository == 'qop-maintainer/queensofpain.cc' && github.event.pull_request.merged == true }}
 
     permissions:
       contents: read
@@ -121,7 +121,7 @@ jobs:
           egress-policy: block
           allowed-endpoints: >
             sts.*.amazonaws.com:443
-            s3.*.amazonaws.com
+            s3.*.amazonaws.com:443
             cloudfront.*.amazonaws.com:443
 
       - name: Download Build Artifacts
