@@ -106,11 +106,11 @@ jobs:
           retention-days: 1
 
   deploy:
-    runs-on: ubuntu-latest
-    needs: [try-build]
+    if: ${{ github.repository == 'qop-maintainer/queensofpain.cc' && github.event.ref == 'refs/heads/main' }}
     environment:
       name: production
-    if: ${{ github.repository == 'qop-maintainer/queensofpain.cc' && github.event.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    needs: [try-build]
 
     permissions:
       contents: read
