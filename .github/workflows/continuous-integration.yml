@@ -49,14 +49,16 @@ jobs:
         uses: step-security/harden-runner@fe104658747b27e96e4f7e80cd0a94068e53901d # v2.16.1
         with:
           disable-sudo-and-containers: true
-          egress-policy: audit
+          egress-policy: block
           # We use Opensheet as a facade over Google Sheets, where Rides data is stored.
           allowed-endpoints: >
             github.com:443
             nodejs.org:443
             opensheet.elk.sh:443
             registry.npmjs.org:443
-            sts.us-east-1.amazonaws.com:443
+            sts.*.amazonaws.com:443
+            s3.*.amazonaws.com
+            cloudfront.*.amazonaws.com:443
 
       - name: Checkout Repo
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
