@@ -17,7 +17,7 @@
     "eslint": "10.1.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-astro": "1.6.0",
-    "eslint-plugin-turbo": "2.9.1",
+    "eslint-plugin-turbo": "2.9.3",
     "globals": "17.4.0",
     "typescript": "6.0.2",
     "typescript-eslint": "8.58.0"
