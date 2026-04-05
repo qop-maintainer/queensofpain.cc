@@ -20,7 +20,6 @@ export default defineConfig({
       directives: [
         "base-uri 'self'",
         "default-src 'none'",
-        "require-trusted-types-for 'script'",
         "img-src 'self' data:",
         "font-src 'self' data:",
         "connect-src 'self'",
