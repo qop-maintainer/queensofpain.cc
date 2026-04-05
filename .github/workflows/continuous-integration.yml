@@ -139,6 +139,11 @@ jobs:
           role-to-assume: ${{ secrets.AWS_IAM_ROLE_DEPLOY }}
           aws-region: ${{ vars.AWS_REGION }}
 
+      - name: List S3 Bucket Contents (Before)
+        run: aws s3 ls $AWS_S3_BUCKET_NAME --recursive
+        env:
+          AWS_S3_BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET_NAME }}
+          
       - name: Deploy to S3
         run: aws s3 sync ./frontend/website/dist $AWS_S3_BUCKET_NAME --delete
         env:
