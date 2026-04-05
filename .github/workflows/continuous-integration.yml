@@ -121,10 +121,11 @@ jobs:
         uses: step-security/harden-runner@fe104658747b27e96e4f7e80cd0a94068e53901d # v2.16.1
         with:
           disable-sudo-and-containers: true
-          egress-policy: audit
+          egress-policy: block
           allowed-endpoints: >
             sts.*.amazonaws.com:443
             s3.*.amazonaws.com:443
+            queensofpain-cc.s3.*.amazonaws.com:443
             cloudfront.*.amazonaws.com:443
 
       - name: Download Build Artifacts
@@ -139,11 +140,6 @@ jobs:
           role-to-assume: ${{ secrets.AWS_IAM_ROLE_DEPLOY }}
           aws-region: ${{ vars.AWS_REGION }}
 
-      - name: List S3 Bucket Contents (Before)
-        run: aws s3 ls $AWS_S3_BUCKET_NAME --recursive
-        env:
-          AWS_S3_BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET_NAME }}
-          
       - name: Deploy to S3
         run: aws s3 sync ./frontend/website/dist $AWS_S3_BUCKET_NAME --delete
         env:
