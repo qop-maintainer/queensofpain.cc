@@ -140,7 +140,7 @@ jobs:
           aws-region: ${{ vars.AWS_REGION }}
 
       - name: Deploy to S3
-        run: aws s3 sync ./frontend/website/dist s3://$AWS_S3_BUCKET_NAME --delete
+        run: aws s3 sync ./frontend/website/dist $AWS_S3_BUCKET_NAME --delete
         env:
           AWS_S3_BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET_NAME }}
 
