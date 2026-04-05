@@ -48,11 +48,11 @@ import { MENU_ITEMS } from "@references/menu";
       </div>
       <ul
         tabindex="0"
-        class="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-base-100 rounded-box w-52"
+        class="menu menu-sm dropdown-content z-1 p-3 shadow bg-base-100 rounded-box w-77"
       >
         {
           MENU_ITEMS.map((item) => (
-            <li>
+            <li class="bg-orange-400 mt-0 mb-0 pt-2 pb-2">
               <a class="link" href={item.href}>
                 {item.label}
               </a>
