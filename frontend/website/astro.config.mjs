@@ -16,6 +16,21 @@ export default defineConfig({
     },
   },
   security: {
-    csp: true,
+    csp: {
+      directives: [
+        "base-uri 'self'",
+        "default-src 'none'",
+        "img-src 'self' data:",
+        "font-src 'self' data:",
+        "connect-src 'self'",
+        "worker-src 'self'",
+        "form-action 'self'",
+        "object-src 'none'",
+        "frame-src https:",
+        "media-src https:",
+        "upgrade-insecure-requests",
+        "manifest-src 'self'",
+        ]
+    },
   },
 });
