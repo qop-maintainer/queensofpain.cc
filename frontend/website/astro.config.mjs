@@ -30,7 +30,7 @@ export default defineConfig({
         "media-src https:",
         "upgrade-insecure-requests",
         "manifest-src 'self'",
-        ]
+      ],
     },
   },
 });
