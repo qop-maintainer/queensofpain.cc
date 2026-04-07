@@ -5,9 +5,7 @@ const name = "Rides";
 const response = await fetch(`https://opensheet.elk.sh/${sheet}/${name}`);
 const data = await response.json();
 
-function subtractDaysFromDate(currentDate: Date, daysToSubtract: number) {
-  daysToSubtract = daysToSubtract || 0;
-
+function subtractDaysFromDate(currentDate: Date, daysToSubtract: number = 0) {
   // Instantiate a new object based on the current Date, rather than mutating the original Date object
   const pastDate = new Date(currentDate);
   pastDate.setDate(pastDate.getDate() - daysToSubtract);
