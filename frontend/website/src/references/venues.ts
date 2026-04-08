@@ -16,6 +16,7 @@ export const VENUES = Venue.parse([
   { lat: 55.9435164, lng: -3.2184992, label: "Fountainbridge" },
   { lat: 55.9553898, lng: -3.1923276, label: "John Lewis" },
   { lat: 55.9815837, lng: -3.1974861, label: "Newhaven Fishmarket" },
+  { lat: 55.9530896, lng: -3.1152064, label: "Portobello Town Hall" }
 ]);
 
 export type Venues = z.infer<typeof Venue>[number];
