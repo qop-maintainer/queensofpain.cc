@@ -6,19 +6,20 @@ const Venue = z.readonly(
       lat: z.number(),
       lng: z.number(),
       label: z.string(),
+      what3words: z.string(),
     }),
   ),
 );
 
 export const VENUES = Venue.parse([
-  { lat: 55.9406042, lng: -3.1949203, label: "Meadows Pavilion Cafe" },
-  { lat: 55.9729468, lng: -3.1684968, label: "Leith Links" },
-  { lat: 55.9563238, lng: -3.1874762, label: "St James Quarter" },
-  { lat: 55.9644509, lng: -3.2152919, label: "Botanics West Gate" },
-  { lat: 55.9530896, lng: -3.1152064, label: "Portobello Town Hall" },
-  { lat: 55.9427654, lng: -3.2106826, label: "Lochrin Basin at Fountainbridge" },
-  { lat: 55.9457176, lng: -3.1892556, label: "Bristo Square" },
-  { lat: 55.9809949, lng: -3.1978104, label: "Newhaven Fishmarket" },
+  { lat: 55.940586, lng: -3.194966, label: "Meadows Pavilion Cafe", what3words: "///vanish.swept.clips" }, 
+  { lat: 55.972954, lng: -3.165919, label: "Leith Links", what3words: "///pound.dent.cost" },
+  { lat: 55.956218, lng: -3.187163, label: "St James Quarter", what3words: "///once.square.feared" },
+  { lat: 55.964438, lng: -3.212842, label: "Botanics West Gate", what3words: "///sleep.orange.poet" },
+  { lat: 55.953172, lng: -3.114957, label: "Portobello Town Hall", what3words: "///region.actor.mouth" },
+  { lat: 55.942823, lng: -3.208068, label: "Lochrin Basin at Fountainbridge", what3words: "///soap.acute.focus" },
+  { lat: 55.945653, lng: -3.189330, label: "Bristo Square", what3words: "///museum.spicy.horns" },
+  { lat: 55.980932, lng: -3.195240, label: "Newhaven Fishmarket", what3words: "///chat.slate.report" },
 ]);
 
 export type Venues = z.infer<typeof Venue>[number];
