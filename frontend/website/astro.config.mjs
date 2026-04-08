@@ -20,7 +20,7 @@ export default defineConfig({
       directives: [
         "base-uri 'self'",
         "default-src 'none'",
-        "img-src 'self' data:",
+        "img-src 'self' data: maps.gstatic.com *.google.com *.googleapis.com *.ggpht.com",
         "font-src 'self' data:",
         "connect-src 'self'",
         "worker-src 'self'",
