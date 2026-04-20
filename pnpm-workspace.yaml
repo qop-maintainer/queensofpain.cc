@@ -5,7 +5,7 @@ packages:
   - "tooling/*"
 
 minimumReleaseAge: 4320
-nodeVersion: 24.14.0
+nodeVersion: 24.15.0
 engineStrict: true
 
 onlyBuiltDependencies:
