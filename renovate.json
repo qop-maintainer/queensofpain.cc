@@ -1,5 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+			"customType": "jsonata",
+			"fileFormat": "yaml",
+			"managerFilePatterns": ["/pnpm-workspace.yaml$/"],
+			"matchStrings": ["{ 'currentValue': nodeVersion }"],
+			"datasourceTemplate": "node-version",
+			"depNameTemplate": "node"
+		}
+  ],
   "extends": [
     "config:best-practices",
     "schedule:nonOfficeHours",
@@ -14,6 +24,24 @@
       "matchDepTypes": ["devDependencies", "peerDependencies"],
       "automerge": true,
       "matchPackageNames": ["/@types/", "/lint/", "/prettier/"]
+    },
+    {
+      "matchManagers": [
+        "mise"
+      ],
+      "groupName": "node-lockstep",
+      "matchPackageNames": [
+        "/^node/"
+      ]
+    },
+    {
+      "matchManagers": [
+        "custom.jsonata"
+      ],
+      "groupName": "node-lockstep",
+      "matchPackageNames": [
+        "/^node/"
+      ]
     }
   ],
   "pre-commit": {
