@@ -1,8 +1,6 @@
 ---
 import { Leaflet, CreateLeafletIcon, Marker, Popup } from "astro-leaflet";
-import type {
-  AstroLeafletOptionsType,
-} from "astro-leaflet";
+import type { AstroLeafletOptionsType } from "astro-leaflet";
 
 const options: AstroLeafletOptionsType = {
   tileByName: "Google&type=street",
@@ -15,31 +13,47 @@ const options: AstroLeafletOptionsType = {
   name="venue-icon"
   options={{ className: "leaflet-icon-venue", iconSize: [20, 20] }}
 />
-<Leaflet options={options} >
-    <Marker latlng={[55.940586, -3.194966]}  astroIconName="venue-icon">
-      <Popup content="<b>Meadows Pavilion Cafe</b><br><a href='https://what3words.com/vanish.swept.clips'>///vanish.swept.clips</a>" />
-    </Marker>
-    <Marker latlng={[55.972954, -3.165919]} astroIconName="venue-icon">
-      <Popup content="<b>Leith Links</b><br><a href='https://what3words.com/pound.dent.cost'>///pound.dent.cost</a>" />
-    </Marker>
-    <Marker latlng={[55.956218, -3.187163]} astroIconName="venue-icon">
-      <Popup content="<b>St James Quarter</b><br><a href=' https://what3words.com/once.square.feared'>///once.square.feared</a>" />
-    </Marker>
-    <Marker latlng={[55.964438, -3.212842]} astroIconName="venue-icon">
-      <Popup content="<b>Botanics West Gate</b><br><a href=' https://what3words.com/sleep.orange.poet'>///sleep.orange.poet</a>" />
-    </Marker>
-    <Marker latlng={[55.953172, -3.114957]} astroIconName="venue-icon">
-      <Popup content="<b>Portobello Town Hall</b><br><a href=' https://what3words.com/region.actor.mouth'>///region.actor.mouth</a>" />
-    </Marker>
-    <Marker latlng={[55.942823, -3.208068]} astroIconName="venue-icon">
-      <Popup content="<b>Lochrin Basin at Fountainbridge</b><br><a href='https://what3words.com/soap.acute.focus'>///soap.acute.focus</a>" />
-    </Marker>
-    <Marker latlng={[55.945653, -3.189330]} astroIconName="venue-icon">
-      <Popup content="<b>Bristo Square</b><br><a href='https://what3words.com/museum.spicy.horns'>///museum.spicy.horns</a>" />
-    </Marker>
-    <Marker latlng={[55.980932, -3.195240]} astroIconName="venue-icon">
-      <Popup content="<b>Newhaven Fishmarket</b><br><a href='https://what3words.com/chat.slate.report'>///chat.slate.report</a>" />
-    </Marker>
+<Leaflet options={options}>
+  <Marker latlng={[55.940586, -3.194966]} astroIconName="venue-icon">
+    <Popup
+      content="<b>Meadows Pavilion Cafe</b><br><a href='https://what3words.com/vanish.swept.clips'>///vanish.swept.clips</a>"
+    />
+  </Marker>
+  <Marker latlng={[55.972954, -3.165919]} astroIconName="venue-icon">
+    <Popup
+      content="<b>Leith Links</b><br><a href='https://what3words.com/pound.dent.cost'>///pound.dent.cost</a>"
+    />
+  </Marker>
+  <Marker latlng={[55.956218, -3.187163]} astroIconName="venue-icon">
+    <Popup
+      content="<b>St James Quarter</b><br><a href='https://what3words.com/once.square.feared'>///once.square.feared</a>"
+    />
+  </Marker>
+  <Marker latlng={[55.964438, -3.212842]} astroIconName="venue-icon">
+    <Popup
+      content="<b>Botanics West Gate</b><br><a href='https://what3words.com/sleep.orange.poet'>///sleep.orange.poet</a>"
+    />
+  </Marker>
+  <Marker latlng={[55.953172, -3.114957]} astroIconName="venue-icon">
+    <Popup
+      content="<b>Portobello Town Hall</b><br><a href='https://what3words.com/region.actor.mouth'>///region.actor.mouth</a>"
+    />
+  </Marker>
+  <Marker latlng={[55.942823, -3.208068]} astroIconName="venue-icon">
+    <Popup
+      content="<b>Lochrin Basin at Fountainbridge</b><br><a href='https://what3words.com/soap.acute.focus'>///soap.acute.focus</a>"
+    />
+  </Marker>
+  <Marker latlng={[55.945653, -3.18933]} astroIconName="venue-icon">
+    <Popup
+      content="<b>Bristo Square</b><br><a href='https://what3words.com/museum.spicy.horns'>///museum.spicy.horns</a>"
+    />
+  </Marker>
+  <Marker latlng={[55.980932, -3.19524]} astroIconName="venue-icon">
+    <Popup
+      content="<b>Newhaven Fishmarket</b><br><a href='https://what3words.com/chat.slate.report'>///chat.slate.report</a>"
+    />
+  </Marker>
 </Leaflet>
 
 <style is:global>

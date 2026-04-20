@@ -2,13 +2,13 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "customManagers": [
     {
-			"customType": "jsonata",
-			"fileFormat": "yaml",
-			"managerFilePatterns": ["/pnpm-workspace.yaml$/"],
-			"matchStrings": ["{ 'currentValue': nodeVersion }"],
-			"datasourceTemplate": "node-version",
-			"depNameTemplate": "node"
-		}
+      "customType": "jsonata",
+      "fileFormat": "yaml",
+      "managerFilePatterns": ["/pnpm-workspace.yaml$/"],
+      "matchStrings": ["{ 'currentValue': nodeVersion }"],
+      "datasourceTemplate": "node-version",
+      "depNameTemplate": "node"
+    }
   ],
   "extends": [
     "config:best-practices",
@@ -26,27 +26,20 @@
       "matchPackageNames": ["/@types/", "/lint/", "/prettier/"]
     },
     {
-      "matchManagers": [
-        "mise"
-      ],
+      "matchManagers": ["mise"],
       "groupName": "node-lockstep",
-      "matchPackageNames": [
-        "/^node/"
-      ]
+      "matchPackageNames": ["/^node/"]
     },
     {
-      "matchManagers": [
-        "custom.jsonata"
-      ],
+      "matchManagers": ["custom.jsonata"],
       "groupName": "node-lockstep",
-      "matchPackageNames": [
-        "/^node/"
-      ]
+      "matchPackageNames": ["/^node/"]
     }
   ],
   "pre-commit": {
     "enabled": true
   },
+  "postUpdateOptions": ["pnpmDedupe"],
   "timezone": "Europe/London",
   "vulnerabilityAlerts": {
     "labels": ["security"]
