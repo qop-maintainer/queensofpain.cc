@@ -23,7 +23,7 @@
     "@repo/eslint-config": "workspace:*",
     "@types/node": "25.6.0",
     "astro": "6.1.8",
-    "astro-embed": "0.12.0",
+    "astro-embed": "0.13.0",
     "astro-leaflet": "1.10.0",
     "astro-lightgallery": "2.3.0",
     "eslint": "10.2.0",
