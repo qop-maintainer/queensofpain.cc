@@ -86,8 +86,8 @@ importers:
         specifier: 1.11.0
         version: 1.11.0
       astro-lightgallery:
-        specifier: 2.3.0
-        version: 2.3.0
+        specifier: 2.4.0
+        version: 2.4.0
       eslint:
         specifier: 10.3.0
         version: 10.3.0(jiti@2.6.1)
@@ -1317,8 +1317,8 @@ packages:
   astro-leaflet@1.11.0:
     resolution: {integrity: sha512-QXjeCWfJ2/MXaaTveqxQiYbrf8g6/OHEoIXiAPShvCZb+9MpGNz5ISH/OA3mecNNjjW1j05ZmQJTC6ywehHbOw==}
 
-  astro-lightgallery@2.3.0:
-    resolution: {integrity: sha512-lBxK4g2xWvaPt0IDf+Ew8FNuO8kN65rK25NWfbuA3Ynk+JK+EuBcFnlGDW1tSreiMPDbDbVh+IEygNwIPwtclA==}
+  astro-lightgallery@2.4.0:
+    resolution: {integrity: sha512-tmRaWk1g75fE1tHTItmgcgld5WPSM/PtfdHLXib8w7ZXCNCtKJfF+yHrghZrBB1KwiftMJUd4trL8biO7pom0A==}
 
   astro@6.1.9:
     resolution: {integrity: sha512-NsAHzMzpznB281g2aM5qnBt2QjfH6ttKiZ3hSZw52If8JJ+62kbnBKbyKhR2glQcJLl7Jfe4GSl0DihFZ36rRQ==}
@@ -4228,7 +4228,7 @@ snapshots:
       '@types/leaflet': 1.9.21
       leaflet: 1.9.4
 
-  astro-lightgallery@2.3.0:
+  astro-lightgallery@2.4.0:
     dependencies:
       lightgallery: 2.9.0
 
