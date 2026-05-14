@@ -18,7 +18,7 @@ overrides:
   "brace-expansion@>=2.0.0 <=2.0.1": ">=2.0.2"
   "brace-expansion@>=4.0.0 <5.0.5": ">=5.0.5"
   "defu@<6.1.5": ">=6.1.5"
-  "devalue@<5.6.4": ">=5.6.4"
+  "devalue@<5.6.4": ">=5.8.1"
   "devalue@<=5.6.3": ">=5.6.4"
   "flatted@<3.4.2": ">=3.4.2"
   "h3@<1.15.9": ">=1.15.9"
@@ -31,3 +31,6 @@ overrides:
   "svgo@=4.0.0": ">=4.0.1"
   "vite@>= 7.0.0, <= 7.3.1": ">=7.3.2"
   "yaml@>=2.0.0 <2.8.3": ">=2.8.3"
+minimumReleaseAgeExclude:
+  # Renovate security update: devalue@<5.6.4@5.8.1
+  - devalue@<5.6.4@5.8.1
