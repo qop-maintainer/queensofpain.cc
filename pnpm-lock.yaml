@@ -34,8 +34,8 @@ importers:
         specifier: 0.14.1
         version: 0.14.1
       prettier-plugin-gherkin:
-        specifier: 3.1.4
-        version: 3.1.4
+        specifier: 4.0.0
+        version: 4.0.0
       turbo:
         specifier: 2.9.12
         version: 2.9.12
@@ -319,6 +319,9 @@ packages:
   '@cucumber/gherkin@32.2.0':
     resolution: {integrity: sha512-X8xuVhSIqlUjxSRifRJ7t0TycVWyX58fygJH3wDNmHINLg9sYEkvQT0SO2G5YlRZnYc11TIFr4YPenscvdlBIw==}
 
+  '@cucumber/gherkin@39.1.0':
+    resolution: {integrity: sha512-pqmSO2bUWxJm3TbNrKXlDaHjL6c77+ez9kWmfCd9oRPeTRPEVH3spZvpAqdXYWOZYSNYwWFCAAeZ4RGpkauNoQ==}
+
   '@cucumber/html-formatter@21.15.1':
     resolution: {integrity: sha512-tjxEpP161sQ7xc3VREc94v1ymwIckR3ySViy7lTvfi1jUpyqy2Hd/p4oE3YT1kQ9fFDvUflPwu5ugK5mA7BQLA==}
     peerDependencies:
@@ -334,6 +337,9 @@ packages:
 
   '@cucumber/messages@27.2.0':
     resolution: {integrity: sha512-f2o/HqKHgsqzFLdq6fAhfG1FNOQPdBdyMGpKwhb7hZqg0yZtx9BVqkTyuoNk83Fcvk3wjMVfouFXXHNEk4nddA==}
+
+  '@cucumber/messages@32.3.1':
+    resolution: {integrity: sha512-yNQq1KoXRYaEKrWMFmpUQX7TdeQuU9jeGgJAZ3dArTsC/T4NpJ6DnqaJIIgwPnz/wtQIQTNX7/h0rOuF5xY4qQ==}
 
   '@cucumber/query@13.6.0':
     resolution: {integrity: sha512-tiDneuD5MoWsJ9VKPBmQok31mSX9Ybl+U4wqDoXeZgsXHDURqzM3rnpWVV3bC34y9W6vuFxrlwF/m7HdOxwqRw==}
@@ -2427,8 +2433,8 @@ packages:
     resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
     engines: {node: ^14.15.0 || >=16.0.0}
 
-  prettier-plugin-gherkin@3.1.4:
-    resolution: {integrity: sha512-Mccs8tUhv7iCAhSkgvdupuJt5nj28UK6Ixsmui6TdVnvDRwy4wwEKv6du4mdMB2S7Oj0xQPTNO53Jo8alj+1bg==}
+  prettier-plugin-gherkin@4.0.0:
+    resolution: {integrity: sha512-EBDwV1Ou9rG+seoh7jcwZ6sXXyHwsbUks5TeSyrlrLaTdz+/qYvnHuwY8rk7mb6/+M1ZGuY4/SiVc68ybwvJOA==}
 
   prettier@3.8.3:
     resolution: {integrity: sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==}
@@ -3345,6 +3351,10 @@ snapshots:
     dependencies:
       '@cucumber/messages': 27.2.0
 
+  '@cucumber/gherkin@39.1.0':
+    dependencies:
+      '@cucumber/messages': 32.3.1
+
   '@cucumber/html-formatter@21.15.1(@cucumber/messages@27.2.0)':
     dependencies:
       '@cucumber/messages': 27.2.0
@@ -3370,6 +3380,11 @@ snapshots:
       class-transformer: 0.5.1
       reflect-metadata: 0.2.2
       uuid: 11.0.5
+
+  '@cucumber/messages@32.3.1':
+    dependencies:
+      class-transformer: 0.5.1
+      reflect-metadata: 0.2.2
 
   '@cucumber/query@13.6.0(@cucumber/messages@27.2.0)':
     dependencies:
@@ -5765,10 +5780,10 @@ snapshots:
       prettier: 3.8.3
       sass-formatter: 0.7.9
 
-  prettier-plugin-gherkin@3.1.4:
+  prettier-plugin-gherkin@4.0.0:
     dependencies:
-      '@cucumber/gherkin': 32.2.0
-      '@cucumber/messages': 27.2.0
+      '@cucumber/gherkin': 39.1.0
+      '@cucumber/messages': 32.3.1
       prettier: 3.8.3
 
   prettier@3.8.3: {}
