@@ -9,7 +9,6 @@ nodeVersion: 24.16.0
 engineStrict: true
 
 onlyBuiltDependencies:
-  - "@tailwindcss/oxide"
   - esbuild
   - sharp
 
@@ -29,5 +28,18 @@ overrides:
   "sharp@<0.32.6": ">=0.32.6"
   "smol-toml@<1.6.1": ">=1.6.1"
   "svgo@=4.0.0": ">=4.0.1"
+  uuid@<11.1.1: ^11.1.1
   "vite@>= 7.0.0, <= 7.3.1": ">=7.3.2"
   "yaml@>=2.0.0 <2.8.3": ">=2.8.3"
+
+minimumReleaseAgeExclude:
+  - postcss@8.5.10
+  - fast-uri@3.1.1
+  - fast-uri@3.1.2
+  - devalue@5.8.1
+  - brace-expansion@5.0.6
+  - uuid@11.1.1
+
+allowBuilds:
+  esbuild: set this to true or false
+  sharp: set this to true or false
