@@ -83,8 +83,8 @@ importers:
         specifier: 0.13.0
         version: 0.13.0(astro@6.3.6(@types/node@25.9.1)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(yaml@2.8.3))
       astro-leaflet:
-        specifier: 1.11.0
-        version: 1.11.0
+        specifier: 1.12.0
+        version: 1.12.0
       astro-lightgallery:
         specifier: 2.4.0
         version: 2.4.0
@@ -1317,8 +1317,8 @@ packages:
     resolution: {integrity: sha512-aOLc/aDR7lTWAHlytEefwn4Y6qs6uMr69DZvUx2A1AOAZsWhGB/paiRWPtVchh9wzMvLeqr+DkbENhVreVr9AQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro-leaflet@1.11.0:
-    resolution: {integrity: sha512-QXjeCWfJ2/MXaaTveqxQiYbrf8g6/OHEoIXiAPShvCZb+9MpGNz5ISH/OA3mecNNjjW1j05ZmQJTC6ywehHbOw==}
+  astro-leaflet@1.12.0:
+    resolution: {integrity: sha512-8xrOzhyIWL/+yG5TL7vTMNVoCTrEVsfTt8at4feqGUwQ8SMticeF1tsRi+jvTZtz8v35HckppyXOR5xpX+yzXg==}
 
   astro-lightgallery@2.4.0:
     resolution: {integrity: sha512-tmRaWk1g75fE1tHTItmgcgld5WPSM/PtfdHLXib8w7ZXCNCtKJfF+yHrghZrBB1KwiftMJUd4trL8biO7pom0A==}
@@ -4223,7 +4223,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro-leaflet@1.11.0:
+  astro-leaflet@1.12.0:
     dependencies:
       '@types/leaflet': 1.9.21
       leaflet: 1.9.4
