@@ -39,12 +39,5 @@
   "engines": {
     "node": ">=22",
     "pnpm": ">=10"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@tailwindcss/oxide",
-      "esbuild",
-      "sharp"
-    ]
   }
 }

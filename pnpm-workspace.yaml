@@ -31,3 +31,7 @@ overrides:
   "svgo@=4.0.0": ">=4.0.1"
   "vite@>= 7.0.0, <= 7.3.1": ">=7.3.2"
   "yaml@>=2.0.0 <2.8.3": ">=2.8.3"
+
+allowBuilds:
+  esbuild: true
+  sharp: true
