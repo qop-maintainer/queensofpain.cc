@@ -18,7 +18,8 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.9",
-    "@astrojs/mdx": "5.0.6",
+    "@astrojs/markdown-satteri": "0.2.2",
+    "@astrojs/mdx": "6.0.2",
     "@astrojs/ts-plugin": "1.10.9",
     "@repo/eslint-config": "workspace:*",
     "@types/node": "25.9.1",
