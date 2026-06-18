@@ -29,7 +29,7 @@
     "astro-lightgallery": "2.6.0",
     "eslint": "10.5.0",
     "node-html-parser": "7.1.0",
-    "sharp": "0.34.5",
+    "sharp": "0.35.1",
     "typescript": "6.0.3",
     "zod": "4.4.3"
   },
