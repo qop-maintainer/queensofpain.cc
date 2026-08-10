@@ -145,10 +145,10 @@ importers:
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.12.1
-        version: 4.12.1(playwright-core@1.60.0)
+        version: 4.12.1(playwright-core@1.62.1)
       '@playwright/test':
-        specifier: 1.60.0
-        version: 1.60.0
+        specifier: 1.62.1
+        version: 1.62.1
       '@types/node':
         specifier: 25.9.5
         version: 25.9.5
@@ -157,7 +157,7 @@ importers:
         version: 17.4.2
       playwright-bdd:
         specifier: 9.2.0
-        version: 9.2.0(@playwright/test@1.60.0)
+        version: 9.2.0(@playwright/test@1.62.1)
 
 packages:
 
@@ -1012,9 +1012,9 @@ packages:
     resolution: {integrity: sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playwright/test@1.60.0':
-    resolution: {integrity: sha512-O71yZIbAh/PxDMNGns37GHBIfrVkEVyn+AXyIa5dOTfb4/xNvRWV+Vv/NMbNCtODB/pO7vLlF2OTmMVLhmr7Ag==}
-    engines: {node: '>=18'}
+  '@playwright/test@1.62.1':
+    resolution: {integrity: sha512-DTcUc8qii+cpHvtOwggMtBRMjKZHXYWdw8syRYu2vtzuq4Wxphqq4NfCs5Zt44L6mA8rfDfj+PHnxFc/FeK6mQ==}
+    engines: {node: '>=20'}
     hasBin: true
 
   '@rollup/pluginutils@5.3.0':
@@ -2635,14 +2635,14 @@ packages:
     peerDependencies:
       '@playwright/test': '>=1.44'
 
-  playwright-core@1.60.0:
-    resolution: {integrity: sha512-9bW6zvX/m0lEbgTKJ6YppOKx8H3VOPBMOCFh2irXFOT4BbHgrx5hPjwJYLT40Lu+4qtD36qKc/Hn56StUW57IA==}
-    engines: {node: '>=18'}
+  playwright-core@1.62.1:
+    resolution: {integrity: sha512-wPYSwEBJY9GHraISXqyqtx0na0LpO3XEX7jNDhntbex7tzUS7kLnZsOlFruFJB4Hi/rhDMjXGqHewDZ68nYZVw==}
+    engines: {node: '>=20'}
     hasBin: true
 
-  playwright@1.60.0:
-    resolution: {integrity: sha512-hheHdokM8cdqCb0lcE3s+zT4t4W+vvjpGxsZlDnikarzx8tSzMebh3UiFtgqwFwnTnjYQcsyMF8ei2mCO/tpeA==}
-    engines: {node: '>=18'}
+  playwright@1.62.1:
+    resolution: {integrity: sha512-0M+L3LAD8/nm554LOla9Ayx0j0tmFZ0FBcoQ7F1VuVHpM/XpiC8RcDzBQB8W5+hA8L22THxELzeF+2WcUzvcLg==}
+    engines: {node: '>=20'}
     hasBin: true
 
   postcss-selector-parser@6.0.10:
@@ -3554,10 +3554,10 @@ snapshots:
     dependencies:
       unicode-segmenter: 0.14.5
 
-  '@axe-core/playwright@4.12.1(playwright-core@1.60.0)':
+  '@axe-core/playwright@4.12.1(playwright-core@1.62.1)':
     dependencies:
       axe-core: 4.12.1
-      playwright-core: 1.60.0
+      playwright-core: 1.62.1
 
   '@babel/helper-string-parser@7.27.1': {}
 
@@ -4122,9 +4122,9 @@ snapshots:
 
   '@pkgr/core@0.2.9': {}
 
-  '@playwright/test@1.60.0':
+  '@playwright/test@1.62.1':
     dependencies:
-      playwright: 1.60.0
+      playwright: 1.62.1
 
   '@rollup/pluginutils@5.3.0(rollup@4.59.0)':
     dependencies:
@@ -6126,7 +6126,7 @@ snapshots:
 
   picomatch@4.0.4: {}
 
-  playwright-bdd@9.2.0(@playwright/test@1.60.0):
+  playwright-bdd@9.2.0(@playwright/test@1.62.1):
     dependencies:
       '@cucumber/ci-environment': 13.0.0
       '@cucumber/cucumber-expressions': 19.0.0
@@ -6137,17 +6137,17 @@ snapshots:
       '@cucumber/messages': 32.3.1
       '@cucumber/query': 15.0.1(@cucumber/messages@32.3.1)
       '@cucumber/tag-expressions': 9.1.0
-      '@playwright/test': 1.60.0
+      '@playwright/test': 1.62.1
       cli-table3: 0.6.5
       commander: 13.1.0
       mime-types: 3.0.2
       tinyglobby: 0.2.17
 
-  playwright-core@1.60.0: {}
+  playwright-core@1.62.1: {}
 
-  playwright@1.60.0:
+  playwright@1.62.1:
     dependencies:
-      playwright-core: 1.60.0
+      playwright-core: 1.62.1
     optionalDependencies:
       fsevents: 2.3.2
 
