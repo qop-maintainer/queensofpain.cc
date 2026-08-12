@@ -23,7 +23,7 @@
     "@astrojs/ts-plugin": "1.10.10",
     "@repo/eslint-config": "workspace:*",
     "@types/node": "25.9.5",
-    "astro": "7.1.0",
+    "astro": "7.2.0",
     "astro-embed": "0.13.1",
     "astro-leaflet": "1.12.0",
     "astro-lightgallery": "2.6.0",
