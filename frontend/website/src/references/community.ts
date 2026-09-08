@@ -25,7 +25,7 @@ export const COMMUNITY = Community.parse({
   TAGLINE: "All bodies, all abilities, all bikes. Just show up and ride.",
   WEBSITE: "https://queens-of-pain.cc",
   CONTACT: {
-    COMMUNITY: "qop-community@gmail.com",
+    COMMUNITY: "qopcommunity@gmail.com",
     MAINTAINER: "qop-maintainer@gmail.com",
     SECURITY: "qop-maintainer@gmail.com",
   },
