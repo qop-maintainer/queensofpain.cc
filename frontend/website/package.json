@@ -22,7 +22,7 @@
     "@astrojs/mdx": "8.0.0",
     "@astrojs/ts-plugin": "1.10.11",
     "@repo/eslint-config": "workspace:*",
-    "@types/node": "25.9.5",
+    "@types/node": "25.9.6",
     "astro": "7.3.1",
     "astro-embed": "0.14.0",
     "astro-leaflet": "1.12.0",

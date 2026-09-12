@@ -12,7 +12,7 @@
   "devDependencies": {
     "@axe-core/playwright": "4.13.0",
     "@playwright/test": "1.63.0",
-    "@types/node": "25.9.5",
+    "@types/node": "25.9.6",
     "dotenv": "17.4.2",
     "playwright-bdd": "9.2.0"
   }
