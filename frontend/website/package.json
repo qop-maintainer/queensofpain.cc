@@ -17,13 +17,13 @@
     "start": "astro dev"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.10",
-    "@astrojs/markdown-satteri": "0.4.1",
-    "@astrojs/mdx": "8.0.1",
+    "@astrojs/check": "0.9.11",
+    "@astrojs/markdown-satteri": "0.4.4",
+    "@astrojs/mdx": "8.1.0",
     "@astrojs/ts-plugin": "1.10.12",
     "@repo/eslint-config": "workspace:*",
     "@types/node": "25.9.9",
-    "astro": "7.3.3",
+    "astro": "7.4.1",
     "astro-embed": "0.14.0",
     "astro-leaflet": "1.12.0",
     "astro-lightgallery": "2.6.0",
