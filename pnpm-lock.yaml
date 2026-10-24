@@ -174,7 +174,7 @@ overrides:
   fast-uri@>=3.0.0 <3.1.9: ^4.0.0
   flatted@<3.4.2: '>=3.4.2'
   h3@<1.15.9: '>=1.15.9'
-  katex@>=0.11.0 <0.18.2: ^0.18.2
+  katex@>=0.11.0 <0.18.2: ^0.19.0
   lodash@>=4.0.0 <=4.17.22: '>=4.17.23'
   nanoid@<3.3.8: '>=3.3.8'
   picomatch@<2.3.2: '>=2.3.2'
@@ -2216,8 +2216,8 @@ packages:
   jsonc-parser@3.3.1:
     resolution: {integrity: sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==}
 
-  katex@0.18.10:
-    resolution: {integrity: sha512-/B6p9eY9DX7aHBfpkHdpirDTZ5QH9xTwL9y837PWuzuv41O5jFdqNQwVQEQsimY0/iVNkwBY4+4hMfhQ7d4Dbw==}
+  katex@0.19.0:
+    resolution: {integrity: sha512-v6Tznz3zJ7u3niRCoDTsumM2+HA2XXcCu+WAacCeHD2z3p9A9Ks987o5FzfTGBN0e8A0vjEgIDvLbICrXpdw/Q==}
     hasBin: true
 
   keyv@5.6.0:
@@ -5186,7 +5186,7 @@ snapshots:
 
   jsonc-parser@3.3.1: {}
 
-  katex@0.18.10:
+  katex@0.19.0:
     dependencies:
       commander: 15.0.0
 
@@ -5562,7 +5562,7 @@ snapshots:
     dependencies:
       '@types/katex': 0.16.8
       devlop: 1.1.0
-      katex: 0.18.10
+      katex: 0.19.0
       micromark-factory-space: 2.0.1
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
