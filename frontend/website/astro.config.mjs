@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
-import { satteri } from '@astrojs/markdown-satteri';
+import { satteri } from "@astrojs/markdown-satteri";
 import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
 

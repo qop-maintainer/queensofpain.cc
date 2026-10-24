@@ -13,15 +13,13 @@ import { MENU_ITEMS } from "@references/menu";
 
   <div class="navbar-end hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      {
-        MENU_ITEMS.map((item) => (
-          <li>
-            <a class="link" href={item.href}>
-              {item.label}
-            </a>
-          </li>
-        ))
-      }
+      {MENU_ITEMS.map((item) => (
+        <li>
+          <a class="link" href={item.href}>
+            {item.label}
+          </a>
+        </li>
+      ))}
     </ul>
     <SocialsInstagram />
   </div>
@@ -43,22 +41,21 @@ import { MENU_ITEMS } from "@references/menu";
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"></path>
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
         </svg>
       </div>
       <ul
         tabindex="0"
         class="menu menu-sm dropdown-content z-1 p-3 shadow bg-base-100 rounded-box w-77"
       >
-        {
-          MENU_ITEMS.map((item) => (
-            <li class="bg-orange-400 mt-0 mb-0 pt-2 pb-2">
-              <a class="link" href={item.href}>
-                {item.label}
-              </a>
-            </li>
-          ))
-        }
+        {MENU_ITEMS.map((item) => (
+          <li class="bg-orange-400 mt-0 mb-0 pt-2 pb-2">
+            <a class="link" href={item.href}>
+              {item.label}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
     <SocialsInstagram />

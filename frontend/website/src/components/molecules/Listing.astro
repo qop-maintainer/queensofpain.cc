@@ -23,28 +23,26 @@ type rideType = {
 ---
 
 <ul>
-  {
-    data
-      .filter(
-        (ride: rideType) =>
-          new Date(ride["Date"]) >= subtractDaysFromDate(new Date(), 7),
-      )
-      .sort(
-        (a: rideType, b: rideType) =>
-          new Date(a["Date"]).getTime() - new Date(b["Date"]).getTime(),
-      )
-      .map((ride: rideType) => (
-        <li>
-          <a
-            class="link"
-            href={ride["Outliers URL"]}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {ride["Date"]} - <b>{ride["Ride Name"]}</b>, led by {ride["Led By"]}{" "}
-            and starting at {ride["Starting At"]}
-          </a>
-        </li>
-      ))
-  }
+  {data
+    .filter(
+      (ride: rideType) =>
+        new Date(ride["Date"]) >= subtractDaysFromDate(new Date(), 7),
+    )
+    .sort(
+      (a: rideType, b: rideType) =>
+        new Date(a["Date"]).getTime() - new Date(b["Date"]).getTime(),
+    )
+    .map((ride: rideType) => (
+      <li>
+        <a
+          class="link"
+          href={ride["Outliers URL"]}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {ride["Date"]} - <b>{ride["Ride Name"]}</b>, led by {ride["Led By"]}{" "}
+          and starting at {ride["Starting At"]}
+        </a>
+      </li>
+    ))}
 </ul>
