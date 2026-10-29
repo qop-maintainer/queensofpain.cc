@@ -26,7 +26,7 @@
     "astro": "7.4.2",
     "astro-embed": "0.14.0",
     "astro-leaflet": "1.12.0",
-    "astro-lightgallery": "2.6.0",
+    "astro-lightgallery": "3.0.1",
     "eslint": "10.13.0",
     "node-html-parser": "9.0.5",
     "sharp": "0.35.5",
