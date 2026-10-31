@@ -13,14 +13,14 @@
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@eslint/markdown": "8.0.3",
-    "@typescript-eslint/parser": "8.72.0",
+    "@typescript-eslint/parser": "8.72.1",
     "eslint": "10.13.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-astro": "3.2.1",
     "eslint-plugin-turbo": "2.11.10",
     "globals": "17.13.0",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.72.0"
+    "typescript-eslint": "8.72.1"
   },
   "peerDependencies": {
     "eslint": "10.13.0"
