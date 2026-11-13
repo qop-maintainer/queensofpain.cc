@@ -28,7 +28,7 @@
     "astro-leaflet": "1.12.0",
     "astro-lightgallery": "3.0.1",
     "eslint": "10.14.0",
-    "node-html-parser": "9.0.6",
+    "node-html-parser": "9.0.7",
     "sharp": "0.35.5",
     "typescript": "6.0.3",
     "zod": "4.6.7"
