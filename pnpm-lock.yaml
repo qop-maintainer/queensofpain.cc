@@ -319,8 +319,8 @@ importers:
         specifier: 26.6.6
         version: 26.6.6
       dotenv:
-        specifier: 18.0.9
-        version: 18.0.9
+        specifier: 18.0.10
+        version: 18.0.10
       playwright-bdd:
         specifier: 9.2.1
         version: 9.2.1(@playwright/test@1.65.0)
@@ -1932,8 +1932,8 @@ packages:
     resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
     engines: {node: '>=12'}
 
-  dotenv@18.0.9:
-    resolution: {integrity: sha512-3fVOW4cB02R066PUSwn8O4TJyz9NckQl7F81blIbaq9jKBm2tSmOKky7ZHIXzGvkVPXCSn6jkpziBPZdGFs8Tw==}
+  dotenv@18.0.10:
+    resolution: {integrity: sha512-89FAA1xchzK2mxVWdr5F/0rldwiueXs6zJM86rO66EzekR1iBdiXRthyG+m5GvkJaFH3C2LESzamTkgndmLT2A==}
     engines: {node: '>=12'}
     hasBin: true
 
@@ -4809,7 +4809,7 @@ snapshots:
 
   dotenv@16.0.3: {}
 
-  dotenv@18.0.9: {}
+  dotenv@18.0.10: {}
 
   dset@3.1.4: {}
 

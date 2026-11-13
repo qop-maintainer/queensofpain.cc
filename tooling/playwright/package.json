@@ -13,7 +13,7 @@
     "@axe-core/playwright": "4.14.0",
     "@playwright/test": "1.65.0",
     "@types/node": "26.6.6",
-    "dotenv": "18.0.9",
+    "dotenv": "18.0.10",
     "playwright-bdd": "9.2.1"
   }
 }
